@@ -33,6 +33,21 @@ export default <Partial<Config>>{
           light: '#e0e6ed',
           lightest: '#f9fafc'
         }
+      },
+      screens: {
+        'min-1001': '1001px'
+      },
+      // 您可以添加其他的樣式類別在這裡
+      // 例如，以下是一個使用 @apply 轉換後的樣式類別
+      sport: {
+        '&': {
+          '@screen min-1001': {
+            '.sportOne': '@apply list-none flex justify-center',
+            '.sportOneP': '@apply bg-gray-300 w-400 h-400 flex flex-col justify-center',
+            '.sportOne > li > img': '@apply h-400 block'
+            // ...
+          }
+        }
       }
     }
   },

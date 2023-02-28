@@ -53,9 +53,14 @@ export default defineNuxtConfig({
     //   // Render these routes on the client (SPA)
     //   '/nuxtFetch/**': { ssr: false }
     // },
+    // prerender: {
+    //   routes: ['/', '/nuxtFetch', '/product', '/pinia', '/tailwind'],
+    //   crawlLinks: true
+    // },
     prerender: {
-      routes: ['/', '/nuxtFetch', '/product', '/pinia', '/tailwind'],
-      crawlLinks: true
+      crawlLinks: false,
+      routes: ['/'],
+      ignore: ['/hi']
     }
   }
 })

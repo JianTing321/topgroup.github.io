@@ -45,6 +45,16 @@
         composables
       </nuxt-link>
     </div>
+    <div>
+      <nuxt-link to="/about">
+        about
+      </nuxt-link>
+    </div>
+    <div>
+      <nuxt-link to="/sport">
+        sport
+      </nuxt-link>
+    </div>
   </div>
 </template>
 <script lang="ts" setup>

@@ -1,6 +1,7 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@tailwind base; /* 基礎樣式 */
+@tailwind components; /* 模組樣式 */
+@tailwind utilities; /* 共用樣式 */
+@tailwind screens; /* 響應式樣式 */
 
 /* 這裡可以放入自定義的css(全局) */
 /* .aaa{
@@ -8,3 +9,49 @@
     flex-direction:column;
     color:red
 } */
+
+@layer utilities {
+  @media screen and (min-width: 1001px) {
+    .sportOne>li > img {
+      /* height: 400px; */
+    }  
+  }
+  @media screen and (max-width: 1000px) {
+    .sportOne {
+      position: relative;
+      display: block;
+    }
+    .sportOneP {
+      position: absolute;
+      width: 80%;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      color: white;
+    }
+    .sportOne>li{
+        width:100%
+    }
+    .sportOne > img {
+      display: block;
+      width: 100%;
+      height: auto;
+    }
+    .sportTwo {
+      position: relative;
+    }
+    .sportTwoP {
+      position: absolute;
+      width: 80%;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      color: white;
+    }
+    .sportTwo > li > img {
+      display: block;
+      width: 100%;
+      height: auto;
+    }
+  }
+}

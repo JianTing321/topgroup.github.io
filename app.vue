@@ -7,10 +7,10 @@
     </p> -->
         <NuxtLayout name="default">
           <template #header>
-            <Header-Global />
-            <p class="px-6 pt-4 text-xl text-green-500">
+            <Header-Global class="z-50" />
+            <!-- <p class="px-6 pt-4 text-xl text-green-500">
               這段會放置在 header 插槽
-            </p>
+            </p> -->
           </template>
           <template #default>
             <NuxtLoadingIndicator />
@@ -23,6 +23,7 @@
             <p class="px-6 pt-4 text-xl text-blue-500">
               這段會放置在 footer 插槽 {{ route.path }}
             </p>
+            <Footer-Global />
           </template>
         </NuxtLayout>
       </div>
