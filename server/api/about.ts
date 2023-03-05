@@ -16,6 +16,6 @@ const aboutLink:aboutLinkConfig[] = [
   }
 ]
 
-// export default defineEventHandler(() => aboutLink)
-
-export default defineEventHandler(() => aboutLink)
+export default defineEventHandler(() =>
+// 一般來說通常api會，直接連接數據庫，目前這裡為暫時寫死的資料
+  aboutLink)

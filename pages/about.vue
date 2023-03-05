@@ -81,6 +81,13 @@
 //   ]
 //   aboutLink.push(...newLinks)
 // }
+useHead({
+  title: '關於',
+  meta: [
+    { name: 'description', content: 'My amazing site.' }
+  ]
+})
+
 const { data: count } = useLazyAsyncData('count', () => $fetch('/api/about'))
 // 通过监听 count 等到它获取到数据时再执行相应的操作
 watch(count, (newValue, oldValue) => {

@@ -1,5 +1,16 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
+  app: {
+    head: {
+      charset: 'utf-16',
+      viewport: 'width=500, initial-scale=1',
+      // title: 'topGroup',
+      meta: [
+        // <meta name="description" content="My amazing site">
+        { name: 'description', content: 'My amazing site.' }
+      ]
+    }
+  },
   // 將新創建的添加./ assets / css / main.css到文件中的
   css: ['~/assets/css/main.css'],
   postcss: {

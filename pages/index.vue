@@ -21,6 +21,11 @@
       </li>
     </div>
     <div>
+      <nuxt-link @click="clickAction">
+        aa
+      </nuxt-link>
+    </div>
+    <div>
       <nuxt-link to="/taiwind">
         taiwind
       </nuxt-link>
@@ -63,5 +68,15 @@ const messageList = [
   { id: '002', title: '消息002', name: 'aa' },
   { id: '003', title: '消息003', name: 'ccc' }
 ]
+async function clickAction () {
+  // router.push({ path: "/about" });
+  await navigateTo({
+    path: '/about',
+    query: {
+      name: '鸢一折纸',
+      age: 18
+    }
+  })
+}
 
 </script>

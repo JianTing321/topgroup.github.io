@@ -13,6 +13,9 @@
             </p> -->
           </template>
           <template #default>
+            <p v-if=" route.path !== '/'" class="px-6 pt-4 text-xl text-blue-500">
+              {{ route.path }}
+            </p>
             <NuxtLoadingIndicator />
             <NuxtPage keep-alive />
             <p class="px-6 pt-4 text-xl text-cyan-500">
@@ -21,7 +24,7 @@
           </template>
           <template #footer>
             <p class="px-6 pt-4 text-xl text-blue-500">
-              這段會放置在 footer 插槽 {{ route.path }}
+              這段會放置在 footer 插槽
             </p>
             <Footer-Global />
           </template>
@@ -32,5 +35,13 @@
 </template>
 <script setup lang="ts">
 const route = useRoute()
+useHead({
+  // chunk代表當頁的標題
+  titleTemplate: (chunk) => {
+    return chunk ? `${chunk} - topGroup` : 'topGroup'
+  }
+})
 
 </script>
+<style>
+</style>
