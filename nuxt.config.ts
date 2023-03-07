@@ -11,6 +11,12 @@ export default defineNuxtConfig({
       ]
     }
   },
+  runtimeConfig: {
+    apiSecret: '123',
+    public: {
+      apiBase: '/api'
+    }
+  },
   // 將新創建的添加./ assets / css / main.css到文件中的
   css: ['~/assets/css/main.css'],
   postcss: {
@@ -42,6 +48,7 @@ export default defineNuxtConfig({
     ]
   ],
   imports: {
+    //  設定自動掛載pinia(也就是不用在個別頁面import)
     dirs: ['./stores']
   },
   ssr: true,
