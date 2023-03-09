@@ -2,7 +2,7 @@
 先行安裝:
  npm install pm2 -g
 */
-// 以下是pm2專用的文件"ecosystem.config.js"
+// 這裡是pm2專用的文件設定"ecosystem.config.js"
 module.exports = {
   apps: [
     {

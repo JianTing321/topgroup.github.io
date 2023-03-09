@@ -32,13 +32,8 @@ export default defineNuxtConfig({
   build: {
     transpile: ['@heroicons/vue']
   },
-  // app: {
-  //   baseURL: '/',
-  //   buildAssetsDir: '/_nuxt/',
-  //   cdnURL: './'
-  // },
-  // ssr: true,
   modules: [
+  // modules裡面代表的是全域的模塊，將會載入有配置的套件，因此這裡的順序也是非常重要。
     [
       // 設定掛載pinia並且將其中的工廠函數defineStore,defineStore自動載入自個別頁面(包含store的main),無須再引入
       '@pinia/nuxt', { autoImports: ['defineStore', 'storeToRefs'] }
@@ -51,8 +46,7 @@ export default defineNuxtConfig({
     //  設定自動掛載pinia(也就是不用在個別頁面import)
     dirs: ['./stores']
   },
-  ssr: true,
-
+  // ssr: true,
   // routeRules: {
   //   '/questions/**': { swr: true },
   //   '/': { static: true },
@@ -64,20 +58,20 @@ export default defineNuxtConfig({
   // generate: { routes: ['/', '/nuxtFetch', '/product', '/pinia', '/tailwind'] },
   nitro: {
     // routeRules: {
-    //   // Static page generated on-demand, revalidates in background (ISG)
-    //   '/pinia/**': { swr: true },
-    //   // Static page generated on-demand once (SSG - or at least mighty close)
-    //   '/product/**': { static: true },
-    //   // Render these routes on the client (SPA)
-    //   '/nuxtFetch/**': { ssr: false }
-    // },
-    // prerender: {
-    //   routes: ['/', '/nuxtFetch', '/product', '/pinia', '/tailwind'],
-    //   crawlLinks: true
+    //   '/**': { ssr: true },
+    //   '/sport/**': { ssr: true },
+    //   '/pinia/**': { ssr: true },
+    //   '/sign/**': { ssr: true },
+    //   '/composables/**': { ssr: true },
+    //   '/about/**': { ssr: true },
+    //   '/product/**': { ssr: true },
+    //   '/nuxtFetch/**': { cors: true },
+    //   '/api/**': { cors: true, proxy: 'http://localhost:3001/**' }
     // },
     prerender: {
       crawlLinks: false,
       routes: ['/'],
+      //   routes: ['/', '/nuxtFetch', '/product', '/pinia', '/tailwind'],
       ignore: ['/hi']
     }
   }
