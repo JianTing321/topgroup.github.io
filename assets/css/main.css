@@ -10,13 +10,24 @@
     color:red
 } */
 
-/* @layer utilities {
-  @media screen and (min-width: 1001px) {
+@layer utilities {
+  /* @media screen and (min-width: 1001px) {
     .sportOne>li > img {
     }  
-  }
-  @media screen and (max-width: 1000px) {
-    .sportOne {
+  } */
+  @media screen and (max-width: 768px) {
+     .sportOne {
+      position: relative;
+      display: block;
+    }
+    .sportOneP {
+      position: absolute;     
+      top:50%;
+      left:50%;
+      transform: translate(-50%, -50%); 
+    } 
+
+    /* .sportOne {
       position: relative;
       display: block;
     }
@@ -51,6 +62,6 @@
       display: block;
       width: 100%;
       height: auto;
-    }
+    } */
   }
-} */
+}

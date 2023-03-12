@@ -1,7 +1,7 @@
 <template>
   <div class="sport text-center list-none text-white">
-    <ul class="md:flex justify-center bg-stone-900 relactive block">
-      <li class="flex justify-center flex-col md:w-1/4 w-full top-1/2 left-1/2 translate-y--1/2 translate-x--1/2">
+    <ul class=" md:flex justify-center items-center bg-stone-900  block relative">
+      <li class=" sportOneP  md:flex  justify-center flex-col md:w-1/4 w-full">
         <div class="mb-2.5">
           Philosophy
         </div>
@@ -10,7 +10,7 @@
           expectations.
         </p>
       </li>
-      <li class="w-3/4">
+      <li class="md:w-3/4 w-full">
         <img src="@/sport/sport_1.jpg" class="w-full block h-auto">
       </li>
     </ul>
