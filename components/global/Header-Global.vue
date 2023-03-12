@@ -5,8 +5,8 @@
         <div class="flex justify-start lg:w-0 lg:flex-1">
           <nuxt-link to="/">
             <span class="sr-only">Your Company</span>
-            <img class="h-8 w-auto sm:h-10" src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600" alt="">
-            <!-- <img class="h-10 w-auto sm:h-20" src="@/logo/logo.svg" alt=""> -->
+            <!-- <img class="h-8 w-auto sm:h-10" src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600" alt=""> -->
+            <img class="h-10 w-auto sm:h-20" src="@/logo/logo3.svg" alt="">
           </nuxt-link>
         </div>
         <div class="-my-2 -mr-2 md:hidden">

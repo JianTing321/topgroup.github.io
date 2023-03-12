@@ -56,6 +56,17 @@ export default defineNuxtConfig({
   //   '/product': { static: true }
   // },
   // generate: { routes: ['/', '/nuxtFetch', '/product', '/pinia', '/tailwind'] },
+  routeRules: {
+    '/**': { ssr: false },
+    '/sport/**': { ssr: false },
+    '/pinia/**': { ssr: false },
+    '/sign/**': { ssr: false },
+    '/composables/**': { ssr: false },
+    '/about/**': { ssr: false },
+    '/product/**': { ssr: false },
+    '/nuxtFetch/**': { cors: false },
+    '/api/**': { cors: true }
+  },
   nitro: {
     // routeRules: {
     //   '/**': { ssr: true },

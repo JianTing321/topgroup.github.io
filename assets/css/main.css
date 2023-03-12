@@ -10,10 +10,9 @@
     color:red
 } */
 
-@layer utilities {
+/* @layer utilities {
   @media screen and (min-width: 1001px) {
     .sportOne>li > img {
-      /* height: 400px; */
     }  
   }
   @media screen and (max-width: 1000px) {
@@ -54,4 +53,4 @@
       height: auto;
     }
   }
-}
+} */

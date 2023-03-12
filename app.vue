@@ -13,6 +13,7 @@
             </p> -->
           </template>
           <template #default>
+            <div>{{ userStore.userName }}</div>
             <p v-if=" route.path !== '/'" class="px-6 pt-4 text-xl text-blue-500">
               {{ route.path }}
             </p>
@@ -35,6 +36,8 @@
 </template>
 <script setup lang="ts">
 const route = useRoute()
+const userStore = useUserStore()
+
 useHead({
   // chunk代表當頁的標題
   titleTemplate: (chunk) => {
